@@ -1,11 +1,18 @@
-const character = "kashyap-007";
+let character = "kashyap";
+let age = 20;
+let isBlackBelt = false;
 
-console.log(character);
+// character = 20; #we can't change the type of decelerade variable in type script.
+character = "kashyap-007"; //but varaiable accept same type of value.
 
-const inputs = document.querySelectorAll("input");
+// age = "Maitu"; #we can't change the type of decelerade variable in type script.
+age = 19; //but varaiable accept same type of value.
 
-console.log(inputs);
+// isBlackBelt = 'yes'; #we can't change the type of decelerade variable in type script.
+isBlackBelt = true; //but varaiable accept same type of value.
 
-inputs.forEach((input) => {
-  console.log(input);
-});
+const circ = (diameter: number) => {
+  return diameter * Math.PI;
+};
+
+console.log(circ(21));
