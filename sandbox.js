@@ -1,26 +1,17 @@
-// explicit types #this how we can defind explicit variables
-var character;
-var age;
-var isLoggedIn;
-// age = 'kashyap'
-age = 30;
-// isLoggedIn = 25;
-isLoggedIn = true;
-// arrays
-var ninjas = [];
-ninjas.push("kashyap");
-// union types
+var age; // here type of age is any
+age = 20; // here we can't change the type of declered variable. just we are assige a value with any type.
+console.log(age);
+age = "hello"; // here we can't change the type of declered variable. just we are assige a value with any type.
+console.log(age);
+age = { name: "kashyap" }; // here we can't change the type of declered variable. just we are assige a value with any type.
+console.log(age);
 var mixed = [];
-mixed.push("hello");
-mixed.push(20);
+mixed.push(5);
+mixed.push("kashyap");
 mixed.push(false);
 console.log(mixed);
-var userId;
-userId = "123";
-userId = 123;
-// userId = false # we can't assign a boolean value to userId.
-// objects
-var ninjaObj;
-ninjaObj = { name: "kashyap", age: 20 };
-var ninjaObjTwo;
-ninjaObjTwo = { name: "kashyap", age: 20, beltColour: "black" };
+var ninja;
+ninja = { name: "kashyap", age: 23 };
+console.log(ninja);
+ninja = { name: 23, age: "kashyap" };
+console.log(ninja);
