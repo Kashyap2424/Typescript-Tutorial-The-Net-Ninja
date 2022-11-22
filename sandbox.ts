@@ -1,42 +1,25 @@
-// explicit types #this how we can defind explicit variables
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
+let age: any; // here type of age is any
 
-// age = 'kashyap'
-age = 30;
+age = 20; // here we can't change the type of declered variable. just we are assige a value with any type.
+console.log(age);
 
-// isLoggedIn = 25;
-isLoggedIn = true;
+age = "hello"; // here we can't change the type of declered variable. just we are assige a value with any type.
+console.log(age);
 
-// arrays
-let ninjas: string[] = [];
+age = { name: "kashyap" }; // here we can't change the type of declered variable. just we are assige a value with any type.
+console.log(age);
 
-ninjas.push("kashyap");
+let mixed: any[] = [];
 
-// union types
-let mixed: (string | number | boolean)[] = [];
-mixed.push("hello");
-mixed.push(20);
+mixed.push(5);
+mixed.push("kashyap");
 mixed.push(false);
-
 console.log(mixed);
 
-let userId: string | number;
+let ninja: { name: any; age: any };
 
-userId = "123";
-userId = 123;
-// userId = false # we can't assign a boolean value to userId.
+ninja = { name: "kashyap", age: 23 };
+console.log(ninja);
 
-// objects
-let ninjaObj: object;
-
-ninjaObj = { name: "kashyap", age: 20 };
-
-let ninjaObjTwo: {
-  name: string;
-  age: number;
-  beltColour: string;
-};
-
-ninjaObjTwo = { name: "kashyap", age: 20, beltColour: "black" };
+ninja = { name: 23, age: "kashyap" };
+console.log(ninja);
