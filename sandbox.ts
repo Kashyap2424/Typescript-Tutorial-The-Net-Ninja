@@ -1,40 +1,42 @@
+// explicit types #this how we can defind explicit variables
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+// age = 'kashyap'
+age = 30;
+
+// isLoggedIn = 25;
+isLoggedIn = true;
+
 // arrays
-let names = ["kashyap", "chintan", "maitu"];
+let ninjas: string[] = [];
 
-//names = 'hello' #as we early learn in this tutorial we can't change type on names variable.
+ninjas.push("kashyap");
 
-names.push("kattu");
+// union types
+let mixed: (string | number | boolean)[] = [];
+mixed.push("hello");
+mixed.push(20);
+mixed.push(false);
 
-// names.push(4); #if we give to the string value to the array in initial stage then. We can't push any number value in this array.
-// names[0] = 3; #and also we can't change value via position(index).
+console.log(mixed);
 
-let numbers = [10, 20, 30, 40];
+let userId: string | number;
 
-numbers.push(50);
-
-let mixed = ["name", 34, "AToZ", 45]; // now this array is contain mixed value('string' and 'numbers'), here in this array we pushed 'string' and 'number' both in the same array.
-
-mixed.push("reveu");
-mixed.push(40);
+userId = "123";
+userId = 123;
+// userId = false # we can't assign a boolean value to userId.
 
 // objects
+let ninjaObj: object;
 
-let ninja = {
-  name: "kashyap",
-  belt: "black",
-  age: 20,
+ninjaObj = { name: "kashyap", age: 20 };
+
+let ninjaObjTwo: {
+  name: string;
+  age: number;
+  beltColour: string;
 };
 
-ninja.age = 21; // #this is valid.
-ninja.name = "ryu"; // #this is valid.
-
-// ninja.age = '30' #we can't change value of key how belong to the other type.
-// ninja.skills = ['fighting', 'sneaking']; # we can't add new pair of key value in the object
-
-// ninja = 'name' #we can't change the object type.
-
-ninja = {
-  name: "kattu",
-  belt: "orange",
-  age: 20,
-};
+ninjaObjTwo = { name: "kashyap", age: 20, beltColour: "black" };
