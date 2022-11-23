@@ -21,3 +21,21 @@ form.addEventListener("submit", (e) => {
     }
     list.render(doc, type.value, "end");
 });
+// GENERICS
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docOne = addUID({ name: "kashyap", age: 20 });
+console.log(docOne.name, docOne.age);
+const docThree = {
+    uid: 1,
+    resouceName: "person",
+    data: { name: "shaun" },
+};
+const docFour = {
+    uid: 2,
+    resouceName: "shoppingList",
+    data: ["bread", "milk", "toilet role"],
+};
+console.log(docThree, docFour);
